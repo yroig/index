@@ -9,12 +9,14 @@ $next_year = $cYear;
 $prev_month = $cMonth-1;
 $next_month = $cMonth+1;
 if ($prev_month == 0) {
-    
+    $prev_month == 12;
+    $prev_year == $cYear -1;
+}
+if ($next_month == 13) {
+    $next_month == 1;
+    $next_year = $cYear +1;
 }
 
-
-
-<?php
 <table width="200" style="border:1px solid #999">
 <tr align="center">
 <td bgcolor="#999999" style="color:#FFFFFF">
@@ -41,28 +43,4 @@ if ($prev_month == 0) {
 <td align="center" bgcolor="999999" style="color:#FFFFFF"><strong>Dissabte</strong></td>
 <td align="center" bgcolor="999999" style="color:#FFFFFF"><strong>Diumenge</strong></td>
 </tr>
-?>
-
-
-
-
-
-
-
-
-
- 
-$prev_year = $cYear;
-$next_year = $cYear;
-$prev_month = $cMonth-1;
-$next_month = $cMonth+1;
- 
-if ($prev_month == 0 ) {
-    $prev_month = 12;
-    $prev_year = $cYear - 1;
-}
-if ($next_month == 13 ) {
-    $next_month = 1;
-    $next_year = $cYear + 1;
-}
 ?>
