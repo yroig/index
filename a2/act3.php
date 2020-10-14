@@ -47,35 +47,14 @@ if ($next_month == 13) {
 $timestamp = mktime(0,0,0,$cMonth,1,$cYear);
 $maxday = date("t", $timestamp);
 $thismonth = getdate($timestamp);
-$startday = $thismonth 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php 
-$timestamp = mktime(0,0,0,$cMonth,1,$cYear);
-$maxday = date("t",$timestamp);
-$thismonth = getdate ($timestamp);
 $startday = $thismonth['wday'];
 for ($i=0; $i<($maxday+$startday); $i++) {
     if(($i % 7) == 0 ) echo "<tr>";
     if($i < $startday) echo "<td></td>";
-    else  {?>
-		<td align="center" valign="middle" height="20px" <?php if ((date("d")== $i - $startday + 1) && !isset ($_GET['mes'])){?> style="background:#999; color:#FFF"<?php }?>> <?php echo ($i - $startday + 1) ?> </td>
-	<?php }
-    if(($i % 7) == 6 ) echo "</tr>";
+    else {?>
+        <td align="center" valign="middle" height="20px" <?php if ((date("d") == $i - $startday + 1) && !isset ($_GET['mes'])){?> style="backgound:#999; color:#FFF"<php echo ($i -$startday +1)?> </td>
+        <?php }
+        if(($i % 7) == 6) echo "</tr>";
 }
 ?>
 </table>
