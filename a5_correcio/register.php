@@ -1,27 +1,18 @@
-
 <?php
 include("funcions.php");
 $errors=true;
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-  //control errors formulari, assegurar que el nom és nom, email és email....pass....
-
-
   if($_REQUEST["pass1"]==$_REQUEST["pass2"]){
     if(!checkIfEmailExists($_REQUEST["email"])){
-
         if(addUser($_REQUEST["nom"],$_REQUEST["email"],$_REQUEST["pass1"])){
 
                 echo "Usuari creat correctament, pots fer login <a href=\"publica.php\">aquí</a>";
                 $errors=false;
         }
-
     }else{
         echo "Aquest email ja existeix....<br>";  
     }
-
-
   }else{
       echo "Els passwords no coincideixen....<br>";
   }
@@ -49,10 +40,6 @@ if($errors){
         <label for="pass2">Repeteix pass:</label>
         <input type="password" name="pass2" id="pass2"><br>
         <input type="submit" value="Afegeix">
-    
-    
-    
-    
     </form>
 </body>
 </html>

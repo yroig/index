@@ -6,16 +6,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-
 $email="javipj@gmail.com";
 $pass="123456";
-
-
 $sql = "SELECT * FROM usuaris where email='$email' and password=md5('$pass') ";
 
-
-   
-   
 if (!$resultado = $conn->query($sql)) {
     die("error ejecutando la consulta:".$conn->error);
 }
@@ -27,17 +21,11 @@ if ($resultado->num_rows >= 0) {
         
     }
 
-
-
 }
-
 
 $resultado->free();
 $conn->close();
 
-
-
 ?>
-
 
 hola
