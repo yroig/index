@@ -1,13 +1,13 @@
 <?php
 
-$conn = new mysqli('localhost', 'javi', 'javi', 'javi_a5');
+$conn = new mysqli('localhost', 'yroig', 'yroig', 'yroig_login2');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$email="javipj@gmail.com";
-$pass="123456";
+$email="yaiza@gmail.com";
+$pass="0000";
 $sql = "SELECT * FROM usuaris where email='$email' and password=md5('$pass') ";
 
 if (!$resultado = $conn->query($sql)) {

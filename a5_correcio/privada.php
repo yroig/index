@@ -21,7 +21,7 @@ include("funcions.php");
     <?php
         if(isAdmin($_SESSION["login"])){
 
-            $conn = connectDB('localhost', 'javi', 'javi', 'javi_a5');
+            $conn = connectDB('localhost', 'yroig', 'yroig', 'yroig_login2');
             $sql = "select * from usuaris  ";
             if (!$resultado = $conn->query($sql)) {
               die("error ejecutando la consulta:".$conn->error);

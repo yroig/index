@@ -10,11 +10,8 @@ $email="";
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
   
     if($_SESSION["id"]!=$_REQUEST["id"] && !isAdmin($_SESSION["login"]) ){
-
         die("error de seguretat");
-
     }
-
     if($_REQUEST["pass1"]==$_REQUEST["pass2"]){
         if($_REQUEST["email"]==$_REQUEST["emailc"] ||  ($_REQUEST["email"]!=$_REQUEST["emailc"]   && !checkIfEmailExists($_REQUEST["email"]))){
             updateUser($_REQUEST["nom"],$_REQUEST["email"],$_REQUEST["pass1"],$_REQUEST["id"]);
@@ -30,8 +27,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         }else{
             echo "---->".$_SESSION["login"]."<-----".$_REQUEST["email"];
             header("location:edituser.php?msg=email_existeix&emailc=".$_SESSION["login"]);
-
-            
         }
      }else{
         echo "Els passwords no coincideixen....<br>";

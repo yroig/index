@@ -134,7 +134,7 @@ function checkIfEmailExists($email){
 function validaUsuari($email,$password){
 
     $resultat=false;
-    $conn = connectDB('localhost', 'javi', 'javi', 'javi_a5');
+    $conn = connectDB('localhost', 'yroig', 'yroig', 'yroig_login2');
     $sql = "select * from usuaris where email='$email' and password='$password' ";
     if (!$resultado = $conn->query($sql)) {
       die("error ejecutando la consulta:".$conn->error);
