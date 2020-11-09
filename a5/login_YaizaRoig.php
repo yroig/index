@@ -18,7 +18,8 @@
     </form>
         <div id="cajacookies">
             <p><button onclick="aceptarCookies()" class="pull-right"><i class="fa fa-times"></i> Acceptar i tancar aquest missatge</button>
-            Aquest lloc web utilitza cookies, si no surt de la pàgina accepta el seu ús.</p>
+            Aquest lloc web utilitza cookies, si no surt de la pàgina accepta el seu ús.
+            </p>
             <a href="https://www.google.com">No accepto les Cookies</a>
         </div>
 </body>
